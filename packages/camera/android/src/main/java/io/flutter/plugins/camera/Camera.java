@@ -135,6 +135,8 @@ public class Camera {
     mediaRecorder.setVideoSize(recordingProfile.videoFrameWidth, recordingProfile.videoFrameHeight);
     mediaRecorder.setOutputFile(outputFilePath);
     mediaRecorder.setOrientationHint(getMediaOrientation());
+    
+    mediaRecorder.setAudioEncodingBitRate(recordingProfile.audioBitRate);
 
     mediaRecorder.prepare();
   }
